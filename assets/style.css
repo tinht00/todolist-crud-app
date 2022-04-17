@@ -107,7 +107,7 @@ body {
 .task-list {
   margin: 20px 25px;
   max-height: 350px;
-  overflow: scroll;
+  overflow: auto;
   font-size: 1.1rem;
   padding: 0 20px;
   /* background: #ccc; */
