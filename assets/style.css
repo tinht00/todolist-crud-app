@@ -1,0 +1,165 @@
+/* Import Google Font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+li {
+  list-style: none;
+}
+.title{
+  text-align: center;
+  color: #80aced;
+  margin-bottom: 20px;
+}
+body {
+  background-color: #80aced;
+}
+.wrapper {
+  background-color: #fff;
+  max-width: 600px;
+  margin: 35px auto;
+  border-radius: 10px;
+  padding: 20px 0;
+  box-shadow: 0 0 15px 1px #000;
+}
+.task-input {
+  height: 50px;
+  padding: 0 20px;
+  position: relative;
+}
+.task-input input {
+  height: 100%;
+  width: 100%;
+  padding: 0 45px 0 45px;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  border: 1px solid #80aced;
+}
+.task-input input:hover {
+  outline: solid #80aced;
+}
+.task-input input:focus {
+  outline: solid #80aced;
+}
+.task-input input::placeholder {
+  color: #5a5a5a;
+}
+.task-input img {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translate(12px, -50%);
+  opacity: 0.5;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 20px;
+  font-size: 1.1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.filters span {
+  margin: 0 15px;
+}
+.filters span.active {
+  color: #568bdb;
+}
+
+/* Button */
+.btn,
+.filters span {
+  cursor: pointer;
+}
+.btn.clear-btn {
+  padding: 5px 15px;
+  color: #fff;
+  background: #80aced;
+  border: none;
+  border-radius: 4px;
+  font-weight: 900;
+}
+
+.btn.add-btn {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 7.5%;
+  transform: translate(12px, -50%);
+  padding: 5px 20px;
+  background-color: #80aced;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 900;
+}
+.btn.clear-btn:hover,
+.btn.add-btn:hover {
+  background: #568bdb;
+}
+
+/* Task List */
+.task-list {
+  margin: 20px 25px;
+  max-height: 350px;
+  overflow: scroll;
+  font-size: 1.1rem;
+  padding: 0 20px;
+  /* background: #ccc; */
+  /* border: 1px solid #ccc; */
+}
+.task-list .task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ccc;
+}
+
+.task-list .task:last-child {
+  margin-bottom: 65px;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+.task label {
+  display: flex;
+}
+.task label p.checked {
+  text-decoration: line-through;
+}
+.task label input {
+  margin-right: 15px;
+}
+.settings {
+  cursor: pointer;
+  position: relative;
+}
+.settings .options-menu {
+  position: absolute;
+  background: #fff;
+  box-shadow: 0 0 6px;
+  padding: 5px;
+  top: 5%;
+  right: 20%;
+  z-index: 2;
+  transform: scale(0); /* Ẩn menu options */
+  transition: 0.2s;
+  transform-origin: top right;
+}
+.settings:hover .options-menu{
+   transform: scale(1);/* Hiển thị menu options */
+}
+
+.options-menu .option {
+  padding: 5px;
+  width: 100px;
+}
+.options-menu .option:hover {
+  background: #cbcbcb;
+}

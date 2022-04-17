@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List App</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/style.css" />
+    <!-- Link icon -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1 class="title">TODO LIST</h1>
+
+      <div class="task-input">
+        <button class="btn add-btn">Add</button>
+        <img src="assets/list-check-solid.svg" width="24" alt="icon" />
+
+        <input type="text" placeholder="Enter your new task... " autofocus/>
+      </div>
+      <div class="controls">
+        <div class="filters">
+          <b>Filters: </b>
+          <span id="all" class="active">All</span>
+          <span id="pending">Pending</span>
+          <span id="completed">Conpleted</span>
+        </div>
+        <button class="btn clear-btn">Clear All</button>
+      </div>
+      <ul class="task-list">
+        <li class="task">
+          <label for="1">
+            <input type="checkbox" id="1" />
+            <p>Task 1</p>
+          </label>
+          <div class="settings">
+            <i class="uil uil-ellipsis-h"></i>
+            <ul class="options-menu">
+              <li class="option"><i class="uil uil-edit-alt"></i>&nbsp Edit</li>
+              <li class="option">
+                <i class="uil uil-trash-alt"></i>&nbsp Delete
+              </li>
+            </ul>
+          </div>
+        </li>
+  
+      </ul>
+    </div>
+  </body>
+  <script src="assets/todo.js"></script>
+</html>
